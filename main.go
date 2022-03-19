@@ -289,36 +289,6 @@ func run(c *cli.Context) error {
 			Debug:       c.Bool("config.debug"),
 			TipsTitle:   c.String("config.tips.title"),
 		},
-		Custom: Custom{
-			Pic: Pic{
-				SuccessPicURL: c.String("custom.pic.url.success"),
-				FailurePicURL: c.String("custom.pic.url.failure"),
-			},
-			Color: Color{
-				SuccessColor: c.String("custom.color.success"),
-				FailureColor: c.String("custom.color.failure"),
-			},
-			Tpl: c.String("custom.tpl"),
-			Consuming: Consuming{
-				StartedEnv:  c.String("custom.started"),
-				FinishedEnv: c.String("custom.finished"),
-			},
-		},
-		Tpl: Tpl{
-			Repo: TplRepo{
-				FullName:  c.String("tpl.repo.full.name"),
-				ShortName: c.String("tpl.repo.short.name"),
-			},
-			Commit: TplCommit{
-				Branch: c.String("tpl.commit.branch.name"),
-			},
-			Build: TplBuild{
-				Status: Status{
-					Success: c.String("tpl.build.status.success"),
-					Failure: c.String("tpl.build.status.failure"),
-				},
-			},
-		},
 	}
 
 	if err := plugin.Exec(); nil != err {
