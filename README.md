@@ -12,3 +12,7 @@ drone step
     when:
       status: [failure, success]
 ```
+
+参考:
+* [drone-dingtalk-message](https://github.com/lddsb/drone-dingtalk-message/blob/master/LICENSE)
+* [dingtalk](https://github.com/CatchZeng/dingtalk/blob/master/LICENSE)
